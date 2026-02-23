@@ -6,22 +6,19 @@ export default function EventSection({ title, date, images, testimonials, video 
       {/* Header */}
       <div className="mb-8">
         <h2 className="text-2xl font-serif font-bold text-yap-text mb-2">{title}</h2>
-        <span className="inline-block text-xs text-yap-red font-medium letter-spacing-[0.06em] bg-yap-red/10 px-3 py-1 rounded">
+        <span className="inline-block text-xs text-yap-red font-medium letter-spacing-[0.06em] bg-yap-red/10 px-3 py-1 rounded-full">
           {date}
         </span>
       </div>
 
-      {/* Content Grid */}
-      <div className="grid grid-cols-1 lg:grid-cols-[1.5fr_1fr] gap-10 items-start">
-        {/* Carousel */}
-        <Carousel images={images} />
-
-        {/* Testimonials & Video */}
+      {/* Content Grid - Testimonials/Video LEFT, Carousel RIGHT */}
+      <div className="grid grid-cols-1 lg:grid-cols-[1fr_1.5fr] gap-10 items-start">
+        {/* Testimonials & Video LEFT */}
         <div className="flex flex-col gap-5">
           {testimonials.map((testimonial, idx) => (
             <div
               key={idx}
-              className="bg-white border-l-2 border-yap-red rounded-sm p-7 shadow-sm"
+              className="bg-white border-l-[3px] border-yap-red rounded-xl p-7 shadow-sm hover:shadow-md transition-all duration-300 ease-in-out"
             >
               <p className="text-sm leading-[1.85] text-yap-text italic mb-3">
                 "{testimonial.quote}"
@@ -33,15 +30,18 @@ export default function EventSection({ title, date, images, testimonials, video 
           ))}
 
           {video && (
-            <div className="bg-white border-l-2 border-yap-red rounded-sm p-7">
+            <div className="bg-white border-l-[3px] border-yap-red rounded-xl p-7">
               <h3 className="text-sm font-bold text-yap-text mb-4">Event Highlights Video</h3>
-              <video controls className="w-full rounded-sm max-h-[400px] bg-black">
+              <video controls className="w-full rounded-lg max-h-[400px] bg-black">
                 <source src={video} type="video/mp4" />
                 Your browser does not support the video tag.
               </video>
             </div>
           )}
         </div>
+
+        {/* Carousel RIGHT */}
+        <Carousel images={images} />
       </div>
     </div>
   )

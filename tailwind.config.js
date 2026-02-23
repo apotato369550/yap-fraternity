@@ -17,7 +17,7 @@ export default {
       },
       fontFamily: {
         serif: ['Noto Serif', 'Georgia', 'serif'],
-        sans:  ['-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial', 'sans-serif'],
+        sans:  ['Noto Serif', 'Georgia', 'serif'],
       },
     },
   },

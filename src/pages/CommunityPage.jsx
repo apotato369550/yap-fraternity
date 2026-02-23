@@ -103,7 +103,7 @@ export default function CommunityPage() {
 
       {/* Events Section */}
       <section className="py-[80px] bg-yap-light">
-        <div className="max-w-[1200px] mx-auto px-10">
+        <div className="max-w-[70vw] mx-auto px-6">
           <EventSection {...anniversary} />
           <hr className="border-none h-px bg-yap-red opacity-20 my-[80px]" />
           <EventSection {...cny} />

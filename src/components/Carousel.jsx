@@ -17,7 +17,7 @@ export default function Carousel({ images }) {
 
   return (
     <div className="w-full">
-      <div className="relative w-full aspect-[4/3] bg-gray-100 rounded-sm overflow-hidden shadow-md">
+      <div className="relative w-full aspect-[4/3] bg-gray-100 rounded-xl overflow-hidden shadow-md">
         {/* Image Stack */}
         {images.map((img, idx) => (
           <img
@@ -33,13 +33,13 @@ export default function Carousel({ images }) {
         {/* Navigation Buttons */}
         <button
           onClick={handlePrev}
-          className="absolute left-2 top-1/2 -translate-y-1/2 z-10 bg-yap-dark/55 hover:bg-yap-red/85 text-white p-2 rounded-sm transition-colors"
+          className="absolute left-2 top-1/2 -translate-y-1/2 z-10 bg-yap-dark/55 hover:bg-yap-red/85 text-white p-2 rounded-full transition-colors duration-200 ease-in-out"
         >
           ❮
         </button>
         <button
           onClick={handleNext}
-          className="absolute right-2 top-1/2 -translate-y-1/2 z-10 bg-yap-dark/55 hover:bg-yap-red/85 text-white p-2 rounded-sm transition-colors"
+          className="absolute right-2 top-1/2 -translate-y-1/2 z-10 bg-yap-dark/55 hover:bg-yap-red/85 text-white p-2 rounded-full transition-colors duration-200 ease-in-out"
         >
           ❯
         </button>
@@ -50,7 +50,7 @@ export default function Carousel({ images }) {
             <button
               key={idx}
               onClick={() => handleDotClick(idx)}
-              className={`w-2.5 h-2.5 rounded-full border-2 transition-colors cursor-pointer ${
+              className={`w-2.5 h-2.5 rounded-full border-2 transition-colors duration-200 ease-in-out cursor-pointer ${
                 idx === currentIndex
                   ? 'bg-yap-red border-yap-red'
                   : 'bg-white/40 border-white/70 hover:bg-white/60'
