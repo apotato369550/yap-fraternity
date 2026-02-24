@@ -8,6 +8,7 @@ export default {
       colors: {
         'yap-yellow':  '#F5C800',
         'yap-red':     '#B81C24',
+        'yap-green':   '#1B6E3A',
         'yap-dark':    '#1C0A00',
         'yap-light':   '#F7F0E3',
         'yap-text':    '#1E1008',

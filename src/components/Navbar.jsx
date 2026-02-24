@@ -2,7 +2,7 @@ import { NavLink } from 'react-router-dom'
 
 export default function Navbar() {
   return (
-    <nav className="sticky top-0 z-[1000] bg-yap-dark py-4 border-b-2 border-yap-red">
+    <nav className="sticky top-0 z-[1000] bg-yap-green py-4">
       <div className="max-w-[70vw] mx-auto px-6 flex justify-between items-center">
         <div className="flex items-center gap-3">
           <img src="/yap_media/yap_logo.png" alt="Yap Fraternity Logo" className="h-14" />
