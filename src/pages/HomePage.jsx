@@ -46,9 +46,9 @@ export default function HomePage() {
       <section
         className="py-10 relative"
         style={{
-          backgroundImage: 'url(/yap_media/vector.svg)',
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
+          backgroundImage: 'url(/yap_media/chinese-background.png)',
+          backgroundRepeat: 'repeat',
+          backgroundSize: '400px 400px',
           backgroundColor: '#F7F0E3'
         }}
       >
@@ -118,25 +118,27 @@ export default function HomePage() {
           </div>
 
           {/* Milestone Block - Hero Style */}
-          <div className="bg-yap-yellow rounded-2xl p-8 max-w-[900px] mx-auto">
-            <div className="flex flex-row items-center justify-center gap-2">
+          <div className="bg-yap-yellow rounded-2xl p-10">
+            <div className="flex flex-row items-stretch justify-center gap-0">
               {/* Logo - LEFT */}
               <img
                 src="/yap_media/yap_logo.png"
                 alt="YAP Logo"
-                className="h-[370px] w-[370px] object-contain flex-shrink-0"
+                className="h-[480px] w-[480px] object-contain flex-shrink-0 pr-8"
                 style={{ borderRadius: '50%' }}
               />
 
+              <div className="w-px bg-yap-gold self-stretch" />
+
               {/* Text - RIGHT */}
-              <div className="flex flex-col justify-center space-y-0 text-left">
-                <h3 className="font-serif text-[2.5rem] font-bold text-yap-dark tracking-[0.08em]">
+              <div className="flex flex-col justify-center space-y-0 text-left pl-10">
+                <h3 className="font-serif text-[3.5rem] font-bold text-yap-dark tracking-[0.08em] leading-[0.9]">
                   FIFTY
                 </h3>
-                <p className="font-serif text-2xl font-semibold text-yap-dark tracking-[0.06em]">
+                <p className="font-serif text-[2rem] font-semibold text-yap-dark tracking-[0.06em] leading-[1.1]">
                   YEARS
                 </p>
-                <p className="font-serif text-sm text-yap-muted leading-relaxed mt-4">
+                <p className="font-serif text-sm text-yap-muted leading-relaxed mt-6">
                   In May 2025, the Cebu Chapter marked its Golden Anniversary. Fifty years of gatherings, service, and people who chose to keep showing up. We did not just celebrate what was. We started building what comes next.
                 </p>
               </div>
